@@ -18,7 +18,17 @@ Messenger Backend Server
 <img width="944" alt="Chatroom" src="https://github.com/Aryashanish/RedXQuantumBotChat/assets/70702833/fd16f2f9-04a0-454e-91cd-fea91a562496">
 <img width="943" alt="About" src="https://github.com/Aryashanish/RedXQuantumBotChat/assets/70702833/f47f1c35-5a37-44f6-bdb0-59cfed43ab0c">
 
+# How to setup Project
+  1. Download Project Clone in local System
+  2. Requirement - Node js install in your System , VS Code ( Any Alternative Software )
+  3. Goto Backend File (cd Backend) and type in terminal - npm i ( Download All dependency )
+  4. Goto Frontend File (cd Frontend) and type in terminal - npm i ( Download All dependency )
+  5. In Backend terminal type - nodemon index.js
+  6. In Frontend terminal type - npm run dev
+  7. Goto the following link which is show in frontend terminal - (http://127.0.0.1:5173/)
+
 # What Technology Used
   1. Frontend - React Js , Telwind Css
   2. Backend - Node Js , Firebase
 
+# Thank You 
