@@ -3,13 +3,13 @@ Messenger Backend Server
 
 #Project
 1. Login/Register (Authentication)
-User can register here and login for used advantage of this platform
+  User can register here and login for used advantage of this platform
 
 2. ChatRoom
-We Provide a Chatroom After Authentication where start chatting with RedX Community.
+  We Provide a Chatroom After Authentication where start chatting with RedX Community.
 
 3.Contact
-If any Query about Web Application then contact us after fill some details like Name , Email , Phone and Query
+  If any Query about Web Application then contact us after fill some details like Name , Email , Phone and Query
 
 #Screenshots
 <img width="944" alt="Home" src="https://github.com/Aryashanish/RedXQuantumBotChat/assets/70702833/67253029-775d-41f5-8e03-f7db1c3e833d">
@@ -19,6 +19,6 @@ If any Query about Web Application then contact us after fill some details like 
 <img width="943" alt="About" src="https://github.com/Aryashanish/RedXQuantumBotChat/assets/70702833/f47f1c35-5a37-44f6-bdb0-59cfed43ab0c">
 
 #What Technology Used
-Frontend - React Js , Telwind Css
-Backend - Node Js , Firebase
+  Frontend - React Js , Telwind Css
+  Backend - Node Js , Firebase
 
