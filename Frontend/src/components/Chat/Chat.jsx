@@ -30,10 +30,8 @@ function App() {
     const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
       if (user) {
         setCurrentUser(user.displayName || 'Guest');
-        setUserEmail(user.email);
       } else {
         setCurrentUser('Guest');
-        setUserEmail('');
       }
     });
 

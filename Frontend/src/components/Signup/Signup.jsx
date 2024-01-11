@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Signup() {
+  const [flag, setFlag] = useState(false);
   const navigate = useNavigate();
   const [user, setUser] = useState({});
 
@@ -22,8 +23,11 @@ function Signup() {
     e.preventDefault();
     axios.post("http://localhost:8000/user/signup", user)
       .then((res) => {
-        console.log(res);
-        navigate("/login");
+        if(res.status === 201)
+          navigate("/login");
+        else {
+          setFlag(false)
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -33,6 +37,7 @@ function Signup() {
 
   return (
     <>
+      {flag ? <h1 className="w-4/3 p-2 m-4 text-center mt-4 text-2xl bg-green-100 rounded-lg font-semibold">Something Went Wrong , Try Again</h1> : ""}
       <div className="w-full h-auto">
         <div className="w-3/5 mx-auto my-9 p-5 flex justify-center shadow-2xl rounded-lg">
           <div className="w-1/2 h-3/2 rounded-lg">

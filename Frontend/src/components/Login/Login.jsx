@@ -8,6 +8,7 @@ import axios from 'axios';
 
 
 function Login() {
+  const [flag, setFlag] = useState(false);
   const [userinfo, setUserinfo] = useState({});
   const navigate = useNavigate();
   const userContext = useContext(UserContext);
@@ -27,20 +28,22 @@ function Login() {
     axios.post("http://localhost:8000/user/signin", userinfo)
       .then((res) => {
         console.log("results", res);
-        console.log("results", res.status);
         userContext.setUser(userinfo);
         console.log("context infor", userContext.user);
-        navigate("/chat");
+        if(res.status === 201)
+          navigate("/chat");
+        else {
+          setFlag(false)
+        }
       })
       .catch((err) => {
         console.log(err);
-        navigate("/signup");
       })
   }
 
   return (
     <>
-      <h1>Something went wront</h1>
+      {flag ? <h1 className="w-4/3 p-2 m-4 text-center mt-4 text-2xl bg-green-100 rounded-lg font-semibold">Something Went Wrong , Try Again</h1> : ""}
       <div className="w-full h-auto">
         <div className="w-3/5 mx-auto my-9 p-5 flex justify-center shadow-2xl rounded-lg">
           <div className="w-1/2 h-3/2 rounded-lg">
